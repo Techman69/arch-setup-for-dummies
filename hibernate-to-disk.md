@@ -1,4 +1,4 @@
-#Hibernatig on Arch Linux
+#Hibernating on Arch Linux
 
 Hibernation is not an option by default and requires some simple work to establish.
 
@@ -16,5 +16,5 @@ Hibernation is not an option by default and requires some simple work to establi
     * Find the line that looks like this: `HOOKS="base udev autodetect modconf block filesystems keyboard fsck"`. It is located in the section named HOOKS.
     * After udev insert hook `resume` (Like this: `..base udev resume..`)
     * Save the file (`Ctrl-x, y, Enter`)
-  2. Run `mkinitcpio -p linux` to generate initramfs.
+  2. Run `mkinitcpio -P linux` to generate initramfs.
 3. Use `systemctl hibernate` to hibernate!
